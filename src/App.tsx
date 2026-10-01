@@ -1,6 +1,7 @@
 import {Box, Paper, TextField, Typography} from "@mui/material";
 import {TegakiRenderer} from "tegaki";
 import caveat from "tegaki/fonts/caveat";
+import kleeOne from "tegaki/fonts/klee-one";
 import {useState} from "react";
 
 const myStyle = {
@@ -57,7 +58,6 @@ function App() {
 
                 <TextField
                     fullWidth
-                    label="Título"
                     name="title"
                     type="text"
                     value={title}
@@ -80,8 +80,9 @@ function App() {
                         overflow: "hidden",
                     }}
                 >
-                    <TegakiRenderer font={caveat}  style={myStyle}>
+                    <TegakiRenderer font={kleeOne}  style={myStyle}>
                         {title}
+                        {/*手書き*/}
                     </TegakiRenderer>
                 </Box>
             </Paper>
